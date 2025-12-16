@@ -89,7 +89,7 @@ content += f"本次登录用户共： {user_num} 个\n登录时间：{time}\n登
 
 # 推送配置
 push = os.getenv('PUSH', '').lower()
-mail_receiver = os.getenv('MAIL', '775836803@qq.com')  # 设置默认邮箱
+mail_receiver = os.getenv('MAIL', 'billwang0202@gmail.com')  # 设置默认邮箱
 tg_bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
 tg_chat_id = os.getenv('TELEGRAM_CHAT_ID')
 
@@ -141,4 +141,5 @@ elif push == "telegram":
     telegram_push(content)
 else:
     print(f"推送失败：PUSH参数错误（当前值：{push}），仅支持mail/telegram")
+
 
